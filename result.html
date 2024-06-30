@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDFA - Result</title>
+    <link rel="shortcut icon" href="images/fp_yellow_fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="result.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css">
+</head>
+<body>
+    <div class="preloader">
+        <div class="scan">
+            <div class="print"></div>
+            <h3>Loading<span class="dots"></span></h3>
+        </div> <!--Scan-->
+    </div> <!--Preloader-->
+   
+    <header>
+        <a href="#" class="logo">GDFA</a>
+            <ul>
+                <li><a href="content.html#home" onclick="navigateTo('content.html', 'home')">Home</a></li>
+                <li><a href="content.html#target" onclick="navigateTo('content.html', 'target')">Aim</a></li>
+                <li><a href="content.html#discuss" onclick="navigateTo('content.html', 'discuss')">Discuss</a></li>
+                <li><a href="content.html#about" onclick="navigateTo('content.html', 'about-us')">About</a></li>
+                <li><a href="content.html#contact" onclick="navigateTo('content.html', 'contact')">Connect</a></li>
+            </ul>
+    </header>
+    <h1 class="definition">Information</h1>
+    <div class="explanation">
+        <h2 class="one">Fingerprints</h2>
+        <div class="dividerline"></div>
+        <p class="firstpara">Fingerprints, unique patterns found on the tips of human fingers, are 
+            formed during fetal development in the womb. Around the 10th week of gestation, the friction 
+            ridges start to develop, influenced by a combination of genetic factors and random events. As the fetus 
+            grows, these ridges push against the surrounding skin, creating distinct patterns that remain unchanged 
+            throughout a person's life. They consist of intricate patterns of ridges and valleys, divided into three 
+            main types: arches, loops, and whorls. Each fingerprint is distinct even between identical twins, making 
+            them a reliable form of personal identification. The uniqueness of fingerprints lies in their core features 
+            which include <span class="highlight">Fingerprint Ridge Density</span> , <span class="highlight">Ridge Count</span> ,
+            <span class="highlight">RTVTR</span> , <span class="highlight">Ridge Width</span> & <span class="highlight">Ridge Thickness</span>. 
+            These factors contribute to the individuality and permanence of fingerprints, making them an invaluable tool in gender determination, 
+            identification & forensic investigations.</p>
+    </div><!--Explanation-->
+<div class="cover"></div> <!--Mask-->
+
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>Content</th>
+                <th>Male</th>
+                <th>Female</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>FRD (ridge/mm²)</td>
+                <td>18-25</td>
+                <td>14-20</td>
+            </tr>
+            <tr>
+                <td>Ridge Count</td>
+                <td>40-70</td>
+                <td>30-50</td>
+            </tr>
+            <tr>
+                <td>RTVTR</td>
+                <td>1.5-2.2</td>
+                <td>1.9-2.5</td>
+            </tr>
+            <tr>
+                <td>RW (mm)</td>
+                <td>0.04-0.06</td>
+                <td>0.03-0.05</td>
+            </tr>
+            <tr>
+                <td>RT (10⁻² mm)</td>
+                <td>22-34</td>
+                <td>15-23</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+    <div class="science">
+        <h2 class="bio">Experiment</h2>
+        <div class="separator"></div>
+            <p class="foren">In biometric identification and forensic investigation, fingerprints play a pivotal role due to their 
+                distinctiveness and permanence. Biometric systems utilize fingerprint recognition algorithms to match an individual's 
+                fingerprint with those stored in a database, allowing for secure access control and authentication. In forensic 
+                investigations, fingerprints found at crime scenes are compared with those of known individuals to establish connections 
+                and aid in solving crimes. Moreover, the presence of fingerprints can provide crucial evidence, linking suspects to 
+                specific locations or objects, thus aiding law enforcement in apprehending perpetrators and ensuring justice.&nbsp;
+                <span class="ref"><a href="https://en.wikipedia.org/wiki/Biometrics">Learn More</a></span></p>
+    </div>
+    <h1 class="score">Result</h1>
+
+    <div class="scancard">
+        <i class="ri-shield-user-fill"></i>
+        <p id="detect">Gender : </p>
+        <div id="answer">{predicted}</div>
+        <p id="finger">Finger :</p>
+        <div id="numberone">T</div>
+        <div id="numbertwo">I</div>
+        <div id="numberthree">M</div>
+        <div id="numberfour">R</div>
+        <div id="numberfive">L</div>
+       <div class="accuslide">Accuracy : </div>
+       <div class="controlroom">
+        <input type="range" min="0" max="100" value="0" step="0.01" class="slider" id="mapshift">
+        <div id="counter">0.00%</div>
+      </div><!--Slider-Container-->
+        <p id="timetaken">Time elapsed :</p>
+        <div id="elapsed"></div> <!--Div to show the preloader duration-->
+        <div class="displayimage">
+            <h5>No image to display.</h5>
+            <i class="ri-error-warning-line"></i>
+        </div>
+    </div><!--Scancard-->
+    <script src="result.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.js"></script>
+</body>
+</html>

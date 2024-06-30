@@ -1,0 +1,1181 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display-swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+}
+body{
+    background: rgb(11, 10, 10);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: fixed;
+    overflow-x: hidden;
+}
+body, html { margin: 0; padding: 0;}
+::-webkit-scrollbar {width: 12px;}
+::-webkit-scrollbar-track {background: #f4d132; }
+::-webkit-scrollbar-thumb {background:#fff; border-radius: 3px;}
+::-webkit-scrollbar-button {
+    display: block;
+    height: 10px;
+    background-color: #000;
+}
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+} 
+.scan{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+.scan .print{
+    position: absolute;
+    top: 200px;
+    width: 300px;
+    height: 380px;
+    background: url('images/img_fprint_darkgrey.png');
+    background-size: 300px;
+    background-repeat: no-repeat;
+}
+.scan .print::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('images/img_fprint_y.png');
+    background-size: 300px;
+    background-repeat: no-repeat;
+    animation: moveover 3.88s ease-in-out infinite;
+}
+@keyframes moveover {
+    0%, 100%{ height: 0%;}
+    50% {height: 100%;}
+}
+.scan h3{
+    position: absolute;
+    top: 532px;
+    left: 704px;
+    font-weight: 480;
+    color: #ff0;
+    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+.dots::after {
+    content: "";
+    display: inline-block;
+    animation: anidot 2s infinite;
+}
+@keyframes anidot {
+    0% { content: ""; }
+    33% { content: "."; }
+    66% { content: ".."; }
+    100% { content: "..."; }
+    100.1% { 
+        content: "."; 
+        animation-delay: 1.2s;
+    }
+} 
+header{
+    position: fixed;
+    background-color: #00000088;
+    backdrop-filter: blur(10px);
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 10px;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 50;
+}
+header .logo{
+    color: yellow;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: 600;
+}
+header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li{
+    list-style: none;
+    margin-left: 20px;
+    font-weight: 650;
+    font-size: 16px;
+}
+header ul li a{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;
+}
+header ul li a:hover{ 
+    background: yellow;
+    color: #000;
+    border-radius: 6px;
+}
+header ul li a.active{ 
+    background: yellow;
+    color: #000;
+    border-radius: 6px;
+}
+.backimage{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 500px;
+    background: #000;
+    z-index: -1;
+}
+.headimg{
+    position: absolute;
+    top: 0px;
+    left: 784px;
+    width: 752px;
+    height: 500px;
+}
+.mainimg{
+    position: absolute;
+    top: 0px;
+    left: -88px;
+    width: 112%;
+    height: 100%;
+}
+.one-line{
+    position: absolute;
+    top: 495px;
+    width: 110%;
+    height: 6px;
+    background-color: yellow;
+    z-index: 2;
+}
+.headtext{
+    position: absolute;
+    top: 91px;
+    right: 767px;
+    height: 357px;
+    width: 672px;
+    z-index: 3;
+}
+.toptext{
+    position: absolute;
+    top:50px;
+    left: -58px;
+    color: #fff;
+    font-size: 28px;
+    font-weight: 700;
+}
+.shaped{
+    position: absolute;
+    color: yellow;
+    font-size: 36px;
+    font-weight: 800;
+    top: 172px;
+    left: -8px;
+}
+.leftover{ /*Leading like....*/
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+}
+.maindown{
+    position: absolute;
+    top: 501px;
+    left: 0px;
+    width: 100%;
+    height: 4404px;
+    background-color: rgb(11, 10, 10);
+    z-index: 4;
+    overflow-x: hidden;
+}
+#target{
+    position: relative;
+    top: 0px;
+    width: 100%;
+    height: 1100px;
+}
+.targtext{
+    position: relative;
+    top: 78px;
+    left: 22px;
+    font-size: 42px;
+    color: #fff;
+    font-weight: 800;
+}
+.subtarg{
+    position: relative;
+    top: 91px;
+    left: 22px;
+    width: 1424px;
+    height: 927px;
+}
+.subtargword{
+    color: #fff;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+}
+.flow{
+    position: relative;
+    color: yellow;
+    font-size: 30px;
+    font-weight: 650;
+    top: 82px;
+}
+.stepone{
+    position: absolute;
+    top: 494px;
+    left: 212px;
+    width: 334px;
+    height: 468px;
+    background-color: rgb(28, 27, 27);
+    border-radius: 12px;
+}
+.steptwo{
+    position: absolute;
+    top: 647.5px;
+    left: 622px;
+    width: 334px;
+    height: 468px;
+    background-color: rgb(28, 27, 27);
+    border-radius: 12px;
+}
+.stepthree{
+    position: absolute;
+    top: 647.5px;
+    left: 1010px;
+    width: 334px;
+    height: 468px;
+    background-color: rgb(28, 27, 27);
+    border-radius: 12px;
+}
+.ri-image-add-line{
+    position: absolute;
+    top: 24px;
+    left: 16px;
+    color: yellow;
+    font-size: 68px;
+}
+.ri-qr-scan-2-line{
+    position: absolute;
+    top: 24px;
+    left: 16px;
+    color: yellow;
+    font-size: 68px;
+}
+.ri-survey-fill{
+    position: absolute;
+    top: 24px;
+    left: 16px;
+    color: yellow;
+    font-size: 68px;
+}
+.innertextone{
+    position: absolute;
+    top: 108px;
+    left: 17px;
+    font-size: 28px;
+    font-weight: 600;
+    color: #fff;
+}
+.innertexttwo{
+    position: absolute;
+    top: 108px;
+    left: 22px;
+    font-size: 28px;
+    font-weight: 600;
+    color: #fff;
+}
+.innertextthree{
+    position: absolute;
+    top: 108px;
+    left: 22px;
+    font-size: 28px;
+    font-weight: 600;
+    color: #fff;
+}
+.subtextone{
+    position: relative;
+    top: 161px;
+    left: 18px;
+    width: 299px;
+    height: 290px;
+    align-self: center;
+}
+.subtexttwo{
+    position: relative;
+    top: 161px;
+    left: 18px;
+    width: 299px;
+    height: 290px;
+    align-self: center;
+}
+.subtextthree{
+    position: relative;
+    top: 161px;
+    left: 18px;
+    width: 299px;
+    height: 290px;
+    align-self: center;
+    z-index: 5;
+}
+.format{
+    color: yellow;
+    font-weight: bolder;
+}
+#paraone{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+}
+#paratwo{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+}
+#parathree{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+}
+.tiy{
+    position: absolute;
+    top: 1188px;
+    left:18px;
+    height: 28px;
+    width: 134px;
+    background: yellow;
+    border: 0.8px solid yellow;
+    border-radius: 3px;
+}
+#yourtext{
+    position: relative;
+    top: 0.5px;
+    text-align: center;
+    color: #000;
+    font-size: 17.5px;
+    font-weight: 650;
+}
+.holdtext{
+    position: relative;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    top: 138px;
+    left: 76px;
+}
+.ri-file-copy-fill{
+    color: white;
+    font-size: 94px;
+}
+#imgicon{
+    position: relative;
+    top: 120px;
+    left: 126px;
+}
+.dragarea{
+    position: absolute;
+    top: 1294px;
+    left: 50px;
+    width: 380px;
+    height: 380px;
+    border: 5px dashed yellow;
+    border-radius: 8px;
+    margin: 10px auto;
+}
+.button{ 
+color: #2b85ed;  
+cursor: pointer;
+font-weight: 500;
+}
+.dragarea.active{
+    border: 5px solid yellow;
+    background: skyblue;
+}
+.dragarea img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.openbutton{
+    position: relative;
+    top: 112px;
+    left: 212px;
+}
+.phototext{
+    position: absolute;
+    top: 1303px;
+    left: 547px;
+    height: 380px;
+    width: 797px;
+}
+.photodef{
+    position: relative;
+    top: 86px;
+    font-size: 32px;
+    font-weight: 650;
+    color: #fff;
+}
+.sometext{
+    position: relative;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    top: 100px;
+}
+.full{ color: rgb(34, 247, 180); font-weight: 650;}
+.result{
+    position: relative;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+    top: 36px;
+}
+.fifty{
+    color: #f00;
+    font-weight: 600;
+}
+#discuss{
+    position: absolute;
+    top: 1802px;
+    height: 1820px;
+    width: 100%;
+    z-index: 6;
+}
+.enter{
+    position: absolute;
+    top: 1708px;
+    left: 178px;
+    border: none;
+    padding: 6px 24px;
+    border-radius: 6px;
+    font-size: 22px;
+    font-weight: 550;
+    text-align: center;
+    cursor: pointer;
+}
+.discussion{
+    position: absolute;
+    top: 72px;
+    left: 22px;
+    font-size: 42px;
+    color: #fff;
+    font-weight: 800;
+}
+.talking{
+    position: absolute;
+    top: 138px;
+    left: 22px;
+    width: 87%;
+    height: max-content;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 450;
+}
+.gradtext {color: rgb(234, 234, 23); font-weight: 650;} 
+.FAQ{ 
+    position: absolute;
+    top: 272px;
+    left: 526px;
+    font-size: 32px;
+    color: rgb(245, 245, 105);
+    font-weight: 750;
+}
+
+.accordion{ 
+    position: relative;
+    top: 380px;
+    left: 340px;
+    max-width: 850px;
+}
+.accordion .showBox{
+    position: relative;
+    margin: 12px 22px;
+}
+.accordion .showBox .label{
+    position: relative;
+    padding: 12px;
+    background: url('images/brown-checks.jpg');
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+.accordion .showBox .label::before{
+    content: '+';
+    color: #fff;
+    position: absolute;
+    top: 25%;
+    right: 20px;
+    font-size: 20px;
+}
+.accordion .showBox .contentanswer{
+    position: relative;
+    background: #d8d8d8;
+    color: #000;
+    line-height: 24.5px;
+    font-weight: 500;
+    height: 0;
+    overflow: hidden;
+    transition: 0.25s ease-in-out;
+    overflow-y: hidden;
+}
+.accordion .showBox.active .contentanswer{
+    height: 160px;
+    padding: 10px;
+
+}
+.accordion .showBox.active .label::before{
+    content: '-';
+    color: #fff;
+}
+.five{ color: orangered; font-weight: 600;}
+#about-us{
+    position: absolute;
+    top: 882px;
+    width: 100%;
+    height: 630px;
+}
+.abouthead{
+    position: absolute;
+    top: 74px;
+    left: 22px;
+    font-size: 42px;
+    color: #fff;
+    font-weight: 800;
+}
+.context{
+    position: absolute;
+    top: 128px;
+    left: 22px;
+    height: 232px;
+    width: 638px;
+    font-weight: 400;
+    font-size: 18px;
+}
+.aboutthree{
+    position: relative;
+    top: 34px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 18px;
+}
+#desc{ 
+    color: rgb(34, 247, 180);
+    font-weight: 550;
+}
+.wrapper{
+    position: absolute;
+    top: 84px;
+    left: 840px;
+    width: 650px;
+    height: max-content;
+    display: flex;
+}
+.bigbox{
+    height:310px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+.cardsystem{
+    position: absolute;
+    top: 50px;
+    right: 58px;
+    height: 350px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+    z-index: 8;
+}
+.card{
+    width: 80px;
+    border-radius: 22px;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(0.23, -0.03, 0,.99);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.9);
+}
+.card > .row{
+    color: #fff;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.card > .row > .cardicon1{
+    background: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    color: rgb(14, 133, 224);
+    border-radius: 50%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px;
+}
+.card > .row > .cardicon2{
+    background: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    color: rgb(66, 32, 4);
+    border-radius: 50%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px;
+}
+.card > .row > .cardicon3{
+    background: #fff;
+    font-weight: 800;
+    font-size: 20px;
+    color: rgb(10, 76, 29);
+    border-radius: 50%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px;
+}
+.card > .row > .description{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 520px;
+    opacity: 1;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+.description h4{
+    position: relative;
+    top: -34px;
+    color: #ffffff;
+    padding-top: 6px;
+    z-index: 20;
+}
+.cardname{
+    position: relative;
+    top: -50px;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+}
+.onecard{ display: none; }
+.onecard:checked + label{ width: 500px; }
+.onecard:checked + label.description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+.card[for="c1"]{background-image: url('images/img_man_code_front.jpg');}
+.card[for="c2"]{background-image: url('images/img_man_code_join.jpg');}
+.card[for="c3"]{background-image: url('images/img_man_code_back.jpg');}
+
+#contact{
+    position: absolute;
+    top: 1454px;
+    height: 480px;
+    width: 104%;
+}
+.touchtext{
+    position: absolute;
+    top: 73px;
+    left: 22px;
+    font-size: 42px;
+    color: #fff;
+    font-weight: 800;
+}
+.form{
+    position: absolute;
+    top: 208px;
+    left: 230px;
+    width: 1050px;
+    height: 532px;
+    background:url('images/yellow\ sphere\ network.jpg');
+    background-size: cover;
+    border: 2px solid yellow;
+    border-radius: 22px;
+}
+.left{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 492px;
+    width: 300px;
+}
+.right{
+    position: absolute;
+    top: 228px;
+    left: 586px;
+    height: 492px;
+    width: 675px;
+}
+.middle{
+    position: absolute;
+    background-color: #fff;
+    top: 20px;
+    left: 329px;
+    height: 492px;
+    width: 6px;
+    border-radius: 3px;
+}
+.rightheadtext{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: #ff0;
+    font-size: 27px;
+    font-weight: 600;
+}
+.righthandtext{
+    position: absolute;
+    color: #fff;
+    top: 51px;
+    left: 0px;
+    font-size: 16px;
+    font-weight: 450;
+    line-height: 18px;
+}
+.ri-map-pin-fill{
+    position: absolute;
+    top: 40px;
+    left: 125px;
+    color: #ff0;
+    font-size: 48px;
+}
+.address{
+    position: absolute;
+    top: 92px;
+    left: 103px;
+    color: #fff;
+    font-size:20px;
+}
+.addtext{
+    position: absolute;
+    top: 122px;
+    left: 42px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+}
+.ri-phone-fill{
+    position: absolute;
+    color: #ff0;
+    font-size: 48px;
+    top: 194px;
+    left: 121px;
+}
+.phoneword{
+    position: absolute;
+    top: 241px;
+    left: 118px;
+    color: #fff;
+    font-size:20px;
+}
+.number{
+    position: absolute;
+    top: 267px;
+    left: 98px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+}
+.ri-mail-send-fill{
+    position: absolute;
+    top: 328px;
+    color: #ff0;
+    font-size: 48px;
+    left: 121px;
+}
+.sendmail{
+    position: absolute;
+    top: 378px;
+    left: 112px;
+    color: #fff;
+    font-size: 20px;
+}
+.mailto{
+    position: absolute;
+    top: 406px;
+    left: 68px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.red{
+    position: absolute;
+    top: 2078px;
+    left: 50px;
+    width: 500px;
+    height: 400px;
+    background-color: #f00;
+}
+
+.wrapped{
+    position: absolute;
+    top: 130px;
+    width:690px;
+}
+form .dbl-field{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+.dbl-field .field{
+    height: 50px;
+    width: calc(100% / 2 - 14px)
+}
+form .field input,
+form .message textarea{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding: 0 18px;
+    border: solid 1px #868585;
+    border-radius: 4px;
+}
+.ri-at-fill{
+    position: absolute;
+    left: 1px;
+    top: 99.5px;
+    color:  #868585;;
+    font-size: 17px;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+.ri-at-fill.active{ color: rgb(179, 70, 12); }
+.ri-user-fill{
+    position: absolute;
+    left: 1px;
+    top: 23.8px;
+    color:  #868585;;
+    font-size: 17px;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+.ri-user-fill.active{ color: rgb(179, 70, 12); }
+.ri-hashtag{
+    position: absolute;
+    left: 361px;
+    top: 99.5px;
+    color:  #868585;;
+    font-size: 17px;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+.ri-hashtag.active{ color: rgb(179, 70, 12); }
+.ri-quill-pen-fill{
+    position: absolute;
+    left: 1px;
+    top: 162px;
+    color:  #868585;
+    font-size: 18px;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+.ri-quill-pen-fill.active{ color: rgb(179, 70, 12); }
+#formname{
+    width: 664px;
+}
+#sendmessage{
+    height: 145px;
+    width: 664px;
+    overflow-y: auto;
+    resize: none;
+}
+#formphonenumber{
+    width: 305px;
+    height: 47.7px;
+}
+#formemail{
+    width: 305px;
+    left: 202px;
+}
+#confirm:disabled{
+    position: absolute;
+    top: 304px;
+    font-size: 18px;
+    border: none;
+    background: rgb(118, 118, 116);
+    padding: 4px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 550;
+} 
+#confirm:enabled{
+    position: absolute;
+    top: 304px;
+    font-size: 18px;
+    border: none;
+    background: #ff0;
+    padding: 4px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #000;
+    font-weight: 550;
+}
+#ontheway{
+    position: absolute;
+    top: 310px;
+    color: #ff0;
+    margin-left: 380px;
+    font-weight: 600;
+   display: none;
+} 
+ #charCount { 
+    position: absolute;
+    top: 266px;
+    left: 592px;
+    color: #7b7a7a;
+    background-color: #fff;
+    font-size: 14px;
+    margin-top: 5px;
+    text-align: right;
+    margin-right: 10px; 
+    font-weight: 450;
+}
+.sent{
+    position: absolute;
+    top: 310px;
+    left: 362px;
+    font-size: 14px;
+    color: rgb(13, 226, 152);
+    font-weight: 550;
+}
+.ri-checkbox-circle-fill{
+    color: rgb(13, 226, 152);
+    font-weight: 550;
+}
+.failure{
+    position: absolute;
+    top: 310px;
+    left: 362px;
+    font-size: 14px;
+    color: red;
+    font-weight: 550;
+}
+.ri-close-circle-fill{
+    color: red;
+    font-weight: 550;
+}
+.footer{
+    position: absolute;
+    top: 2280px;
+    background: url('images/vortex_ky.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 322px;
+    width:100%;
+    border-top: 2px dashed #f6ee83;
+}
+#lastlogo{
+    position: absolute;
+    color: white;
+    font-size: 62px;
+    top: 28px;
+    left: 52px;
+}
+.lasttext{
+    position: absolute;
+    top: 92px;
+    left: 56px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+}
+.lastline{
+    position: absolute;
+    top: 268px;
+    left: 20px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+.newsletter{
+    position: absolute;
+    top: 48px;
+    left: 1242px;
+    width: 230px;
+    height: 240px;
+}
+#letterheading{
+    position: absolute;
+    left: 68px;
+    color: #fff;
+    top: 18px;
+    font-weight: 540;
+}
+.newsarea{
+    position: absolute;
+    top: 38px;
+    left: 11px;
+    align-self: center;
+    height: 210px;
+    width: 240px;
+}
+#lettercontent{
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    width:240px;
+    color: #fff;
+    line-height: 20px;
+    font-weight: 300;
+    font-size: 13.7px;
+}
+.menulist{
+    position: absolute;
+    top: 82px;
+    left: 244px;
+    height: 220px;
+    width: 200px;
+    border-radius: 8px;
+}
+#dropdown{
+    font-weight: 540;
+    color: #fff;
+    text-align: center;
+}
+.listitems{
+    position: absolute;
+    top: 32px;
+    left: 66px;
+    height: max-content;
+    text-align: center;
+    list-style: none;   
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    
+}
+.listitems a{ 
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 500;
+}
+.followus{
+    position: absolute;
+    top: 84px;
+    left: 502px;
+    height: 170px;
+    width: 520px;
+}
+.platforms{
+    position: absolute;
+    top: -2px;
+    left: 150px;
+    color: #fff;
+    font-size: 28px;
+    font-weight: 700;
+}
+.fb{
+    position: absolute;
+    top: 60px;
+    left: 80px;
+    height: 50px;
+    width: 50px;
+    background: #fff;
+    border-radius: 50%;
+}
+.fb a, .tweet a, .in a, .medium a, .behance a{ text-decoration: none; color: #000;} 
+.fb a:hover{ text-decoration: none; color: rgb(18, 90, 190);}
+.ri-facebook-fill{
+    position: absolute;
+    top: 10.5px;
+    left: 12px;
+    font-size: 24px;
+}
+.tweet{
+    position: absolute;
+    top: 60px;
+    left: 160px;
+    height: 50px;
+    width: 50px;
+    background: #fff;
+    border-radius: 50%;
+}
+.ri-twitter-x-fill{
+    position: absolute;
+    top: 11px;
+    left: 12.8px;
+    font-size: 24px;
+}
+.tweet a:hover{ text-decoration: none; color: rgb(121, 20, 222); }
+.in{
+    position: absolute;
+    top: 60px;
+    left: 240px;
+    height: 50px;
+    width: 50px;
+    background: #fff;
+    border-radius: 50%;
+}
+.ri-linkedin-fill{
+    position: absolute;
+    top: 10px;
+    left: 12.8px;
+    font-size: 24px;
+}
+.in :hover{ text-decoration: none; color: rgb(34, 11, 205); }
+.medium{
+    position: absolute;
+    top: 60px;
+    left: 320px;
+    height: 50px;
+    width: 50px;
+    background: #fff;
+    border-radius: 50%;    
+}
+.medium :hover{text-decoration: none; color: #f00; }
+.ri-medium-fill{
+    position: absolute;
+    top: 12px;
+    left: 14px;
+    font-size: 24px;
+}
+.behance{
+    position: absolute;
+    top: 60px;
+    left: 400px;
+    height: 50px;
+    width: 50px;
+    background: #fff;
+    border-radius: 50%;
+}
+.ri-behance-fill{
+    position: absolute;
+    top: 10.6px;
+    left: 13.4px;
+    font-size: 24px;
+}
+.behance :hover{ text-decoration: none; color: rgb(40, 187, 170)}
